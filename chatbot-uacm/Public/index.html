@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/inicio.png">
+  <title>UACMIGO - Chatbot UACM</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <div class="chatbot-container">
+    <header class="chatbot-header">
+      <img src="assets/logo-uacm.png" alt="UACM Logo" class="logo">
+    </header>
+
+    <div class="welcome-message" id="welcomeMessage">
+      <h1>HOLA, BIENVENIDO A UACMIGO</h1>
+      <p>¿En qué puedo ayudarte hoy?</p>
+    </div>
+
+    <!-- Panel de preguntas frecuentes (centrado) -->
+    <div class="faq-container" id="faqContainer">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-grid">
+        <div class="faq-card" data-pregunta="¿Cuáles son los horarios de atención?">
+          <span>🕒</span>
+          <p>Horarios</p>
+        </div>
+        <div class="faq-card" data-pregunta="¿Dónde encuentro el calendario escolar?">
+          <span>📅</span>
+          <p>Calendario</p>
+        </div>
+        <div class="faq-card" data-pregunta="¿Qué tipos de becas ofrecen?">
+          <span>💰</span>
+          <p>Becas</p>
+        </div>
+        <div class="faq-card" data-pregunta="¿Cómo realizo el servicio social?">
+          <span>👨‍🎓</span>
+          <p>Servicio Social</p>
+        </div>
+        <div class="faq-card" data-pregunta="¿Cuáles son las opciones de titulación?">
+          <span>🎓</span>
+          <p>Titulación</p>
+        </div>
+        <button class="direct-chat-btn" id="directChatBtn">
+          <span>💬</span> 
+          <p> Chat Directo </p>
+        </button>
+      </div>
+    </div>
+
+      <!-- Botón flotante de soporte técnico -->
+  <a href="soporte.html" class="soporte-btn" title="Soporte Técnico">
+    <span class="soporte-icon">⚙️</span>
+    <span class="soporte-texto">Soporte</span>
+  </a>
+
+    <!-- Área de chat -->
+    <div class="chat-area" id="chatArea" style="display: none;">
+
+    <!-- Botón de regreso agregado aquí -->
+    <button class="back-to-menu-btn" id="backToMenuBtn">
+      <span>←</span> Regresar al menú principal
+    </button>
+      <div id="chat-box" class="chat-box"></div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Escribe tu pregunta aquí...">
+        <button id="sendButton">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script type="module" src="../src/controllers/ChatbotController.js"></script>
+  
+
+</body>
+</html>

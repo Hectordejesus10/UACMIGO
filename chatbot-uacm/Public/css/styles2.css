@@ -1,0 +1,238 @@
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+      --success-color: #27ae60;
+      --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+
+      height: 100vh;
+      display: flex;
+      background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.7)), 
+                  url('https://uacm.edu.mx/portals/_default/skins/wcga-uacm/images/Plantel.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: var(--light-color);
+    }
+
+    .support-container {
+      background-color: rgba(0, 0, 0, 0.452);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 30px;
+      box-shadow: var(--box-shadow);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .support-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      z-index: -1;
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--secondary-color);
+      border-radius: 3px;
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .contact-info {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .contact-info:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .contact-item img {
+      width: 28px;
+      height: 28px;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+    }
+
+    .contact-item span {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .map {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .map:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .map img {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+    }
+
+    .map p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .map p strong {
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+
+    /* Botón de Home Mejorado */
+    .home-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--success-color);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+      transition: var(--transition);
+      z-index: 100;
+      border: none;
+      outline: none;
+    }
+
+    .home-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+      background: #2ecc71;
+    }
+
+    .home-button:active {
+      transform: translateY(1px);
+    }
+
+    .home-button img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+      transition: var(--transition);
+    }
+
+    .home-button:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Efecto de burbujas flotantes */
+    .bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+      .support-container {
+        padding: 30px 20px;
+      }
+      
+      .contacts {
+        grid-template-columns: 1fr;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .home-button {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  

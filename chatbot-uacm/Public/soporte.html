@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte UACM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <script>
+    function volverInicio() {
+      window.location.href = "index.html";
+    }
+
+    // Crear burbujas decorativas
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.support-container');
+      for (let i = 0; i < 10; i++) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        const size = Math.random() * 100 + 50;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const opacity = Math.random() * 0.2 + 0.05;
+        const animationDuration = Math.random() * 20 + 10;
+        
+        bubble.style.width = `${size}px`;
+        bubble.style.height = `${size}px`;
+        bubble.style.left = `${posX}%`;
+        bubble.style.top = `${posY}%`;
+        bubble.style.opacity = opacity;
+        bubble.style.animation = `float ${animationDuration}s infinite alternate`;
+        
+        container.appendChild(bubble);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="support-container">
+    <h2>SOPORTE TÉCNICO UACM</h2>
+    <div class="contacts">
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Teléfono">
+          <span>Teléfono: 555-000-1234</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Teléfono">
+          <span>Emergencias: 555-000-5678</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Teléfono">
+          <span>Oficina: 555-000-9012</span>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Correo">
+          <span>soporte@uacm.edu.mx</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Correo">
+          <span>contacto@uacm.edu.mx</span>
+        </div>
+        <div class="contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Correo">
+          <span>emergencias@uacm.edu.mx</span>
+        </div>
+      </div>
+     
+      <div class="map">
+        <img src="https://cdn-icons-png.flaticon.com/512/2776/2776067.png" alt="Ubicación">
+        <p><strong>Ubicación:</strong> Av. La Corona 320, Col. Loma la Palma, Alcaldía Gustavo A. Madero, Ciudad de México</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="home-button" onclick="volverInicio()" aria-label="Volver al inicio">
+    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Inicio">
+  </button>
+</body>
+</html>
